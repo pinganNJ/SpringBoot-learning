@@ -25,6 +25,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer configurer = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
+                //这里实现了项目下登陆直接请求转发到登陆login界面
                 registry.addViewController("/").setViewName("login");
                 registry.addViewController("/login.html").setViewName("login");
             }
